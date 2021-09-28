@@ -11,7 +11,7 @@ public class DemoApplication {
 
 	@GetMapping("/")
 	public String available() {
-	return "<html><body><h1>Sample Spring Application</body></h1></html>";
+	return "<html><body><h1>DevSecOps Demo</body></h1></html>";
 	}
 
 	public static void main(String[] args) {
