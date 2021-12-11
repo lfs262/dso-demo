@@ -40,8 +40,9 @@ pipeline {
         }
         stage('Build with Kaniko') {
           steps {
-           git 'https://github.com/jenkinsci/docker-inbound-agent.git'
+            container('kaniko') {
            sh '/kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --cache=true --destination=docker.io/vinycoolguy/dsodemo'
+            }
       }
     }
       }
