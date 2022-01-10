@@ -1,3 +1,5 @@
+#!/bin/groovy
+
 pipeline {
   agent {
     kubernetes {
@@ -41,8 +43,8 @@ pipeline {
             }
           }
         }
-      }
-    }
+      } /* parallel */
+    } /* Static Analysis */
     stage('Package') {
       parallel {
         stage('Create Jarfile') {
