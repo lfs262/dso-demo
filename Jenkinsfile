@@ -43,7 +43,7 @@ pipeline {
         }
       }
     }
-  }
+  
     stage('Package') {
       parallel {
         stage('Create Jarfile') {
@@ -69,5 +69,6 @@ pipeline {
         sh "echo done"
       }
     }
+  }
 }
 
