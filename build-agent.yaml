@@ -26,8 +26,8 @@ spec:
     - name: slscan
       image: shiftleft/sast-scan
       imagePullPolicy: Always
-      command:
-        - cat
+      command: 
+        - cat 
         tty: true
     - name: trufflehog
       image: rmkanda/trufflehog
