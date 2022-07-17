@@ -41,6 +41,7 @@ pipeline {
            }
           }
         }
+        /*
 	stage('OSS License Checker') {
           steps {
             container('licensefinder') {
@@ -54,6 +55,7 @@ pipeline {
             }
           }
         }
+        */
         stage('Generate SBOM') {
           steps {
             container('maven') {
