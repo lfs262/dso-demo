@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  name: build-agent
   labels:
     app: spring-build-ci
 spec:
