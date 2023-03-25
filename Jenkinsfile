@@ -18,7 +18,7 @@ pipeline {
         }
       }
     }
-    stage('Test') {
+    stage('Static Analysis') {
       parallel {
         stage('Unit Tests') {
           steps {
@@ -42,7 +42,7 @@ pipeline {
            }
         }
       }
-    }
+      }}
     stage('Package') {
       parallel {
         stage('Create Jarfile') {
