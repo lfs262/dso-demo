@@ -18,7 +18,7 @@ pipeline {
         }
       }
     }
-    stage('Static Analysis 1') {
+    stage('Static Analysis') {
       parallel {
         stage('Unit Tests') {
           steps {
