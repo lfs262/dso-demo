@@ -33,7 +33,7 @@ spec:
       imagePullPolicy: Always
       command:
         - sleep
-       args:
+      args:
         - 99d
       volumeMounts:
         - name: jenkins-docker-cfg
