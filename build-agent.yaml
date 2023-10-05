@@ -63,5 +63,5 @@ spec:
             name: regcred2
             items:
               - key: .dockerconfigjson
-                path: .docker/config.json
+                path: config.json
 
