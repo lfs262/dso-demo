@@ -60,7 +60,7 @@ spec:
       projected:
         sources:
           - secret: 
-            name: regcred
+            name: regcred2
             items:
               - key: .dockerconfigjson
                 path: config.json
