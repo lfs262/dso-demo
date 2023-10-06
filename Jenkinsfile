@@ -51,7 +51,7 @@ pipeline {
                       rvm use default
                       gem install license_finder
                       license_finder
-                 '''
+                   '''
             }
           }
         }
