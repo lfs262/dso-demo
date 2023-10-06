@@ -12,6 +12,7 @@ pipeline {
         stage('Compile') {
           steps {
             container('maven') {
+              sh 'maven --version'
               sh 'mvn compile'
             }
           }
