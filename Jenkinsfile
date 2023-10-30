@@ -20,10 +20,17 @@ pipeline {
     }
     stage('Test') {
       parallel {
-        stage('Unit Tests') {
+        stage('SCA') {
           steps {
             container('maven') {
-              sh 'mvn test'
+              catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                sh 'mvn org.owasp:dependency-check-maven:check'
+              }
+            }
+          }
+          post {
+            always {
+              archiveArtifacts allowEmptyArchive: true, artifacts: 'target/dependency-check-report.html', fingerprint: true, onlyIfSuccessful: true
             }
           }
         }
