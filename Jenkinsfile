@@ -20,6 +20,13 @@ pipeline {
     }
     stage('Test') {
       parallel {
+        stage('Unit Tests') {
+          steps {
+            container('maven') {
+              sh 'mvn test'
+            }
+          }
+        }
         stage('SCA') {
           steps {
             container('maven') {
