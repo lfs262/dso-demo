@@ -43,6 +43,12 @@ spec:
       command:
         - cat
       tty: true
+    - name: slscan
+      image: shiftleft/sast-scan
+      imagePullPolicy: Always
+      command:
+      - cat
+      tty: true
   volumes:
     - name: jenkins-docker-cfg
       projected:
