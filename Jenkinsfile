@@ -89,6 +89,31 @@ pipeline {
       }
     }
 
+    // Image scanning
+    stage("Image Analysis") {
+      parallel {
+        stage("Image Lint") {
+          // Dockle
+          steps {
+            container('docker-tools') {
+              sh 'dockle docker.io/ennc0d3/dsodemo'
+            }
+          }
+        }
+        stage("Image Vuln") {
+          // Trivy
+          steps {
+            container('docker-tools') {
+              sh 'trivy image --exit-code 1 ennc0d3/dsodemo'
+            }
+              
+          }
+
+        }
+      }
+    }
+    //
+
     stage('Deploy to Dev') {
       steps {
         // TODO
