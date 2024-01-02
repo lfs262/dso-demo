@@ -41,6 +41,20 @@ pipeline {
             }
           }
         }
+        stage ('OSS LicenseChecker') {
+          steps {
+            container('licensefinder') {
+              sh 'ls -al'
+              sh '''#!/bin/bash --login
+                    /bin/bash --login
+                    rvm use default
+                    gem install license_finder
+                    license_finder
+                    '''
+
+            }
+          }
+        }
       }
     }
     stage('Package') {
