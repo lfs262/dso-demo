@@ -35,20 +35,26 @@
     :why: 
     :versions: []
     :when: 2020-05-31 15:27:29.688403000 Z
+- - :permit
+  - New BSD
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2023-05-31 15:27:29.688403000 Z
 - - :approve
   - logback-core
   - :who: 
     :why: 
     :versions:
-    - 1.2.3
-    :when: 2020-05-31 15:28:30.302764000 Z
+    - 1.2.6
+    :when: 2023-05-31 15:28:30.302764000 Z
 - - :approve
   - logback-classic
   - :who: 
     :why: 
     :versions:
-    - 1.2.3
-    :when: 2020-05-31 15:29:03.621478000 Z
+    - 1.2.6
+    :when: 2023-05-31 15:29:03.621478000 Z
 - - :approve
   - jakarta.xml.bind-api
   - :who: 
