@@ -41,8 +41,7 @@ pipeline {
         stage('Docker build and Publish') {
           steps {
             container('kaniko') {
-              sh '/kaniko/executor -f `pwd`/Dockerfile -c `pwd`
-              --insecure --skip-tls-verify --cache=treu --destination=docker.io/ennc0d3/dsodemo
+              sh '/kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --cache=true --destination=docker.io/ennc0d3/dsodemo'
             }
           }
 
