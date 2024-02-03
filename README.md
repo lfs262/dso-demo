@@ -102,6 +102,7 @@ Refer the below screenshot for the stages in the pipeline
 | IaC Hardening       | [checkov](https://www.checkov.io/)                                        |
 | DAST                | [OWASP Baseline Scan](https://www.zaproxy.org/docs/docker/baseline-scan/) |
 
+
 ---
 
 ### TODO
