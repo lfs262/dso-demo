@@ -33,6 +33,16 @@ spec:
       command:
         - cat
       tty: true
+    - name: kaniko
+      image: gcr.io/kaniko-project/executor:v1.14.0-debug
+      imagePullPolicy: Always
+      command:
+      - sleep
+      args:
+      - 99d
+      volumeMounts:
+        - name: jenkins-docker-cfg
+          mountPath: /kaniko/.docker
   volumes:
     - name: m2
       hostPath:
